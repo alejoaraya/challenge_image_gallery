@@ -1,5 +1,3 @@
-
-
 const Image = (props:any) => {
     return ( 
         <>
