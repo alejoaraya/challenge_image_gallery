@@ -7,7 +7,7 @@ const Modals = () => {
     return (
     <>
         <h1>Modales</h1>
-        <button onClick={OpenModal}>Modal 1</button>
+        <button onClick={() => OpenModal}>Modal 1</button>
         <Modal active={active} closeModal={CloseModal}>
             <h1>Modal</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo hic enim voluptates, dolores ducimus odit porro dicta aperiam autem et, consectetur obcaecati. Ratione ab molestiae nesciunt accusantium error voluptate reiciendis.
