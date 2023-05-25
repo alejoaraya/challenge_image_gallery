@@ -1,15 +1,10 @@
 import { useModal } from "../hooks/useModal";
 import ImageDetail from "./ImageDetail";
-import Modal from "./Modal/Modal";
+import Modal from "./Modal";
 
 const Image = (props:any) => {
 
     const [active, OpenModal, CloseModal] = useModal(false);
-
-    
-const getUrl = (data) => {
-    console.log(data.target)
-}
 
     return ( 
         <>

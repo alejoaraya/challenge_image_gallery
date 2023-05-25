@@ -1,10 +1,8 @@
 import { createContext, useState } from "react";
 import Images from "./components/Images";
 import Sercher from "./components/Searcher";
-// import ImageProvider from "./context/ImageProvider";
 
 export const ImageContext = createContext([]);
-
 
 function App() {
 
