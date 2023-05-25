@@ -7,7 +7,7 @@ function Sercher() {
 
   const { register, handleSubmit } = useForm()
 
-  const [keyword, setKeyword] = useContext(ImageContext)
+  const [_keyword, setKeyword] = useContext(ImageContext)
 
   const onSubmit = (data) => {
     setKeyword(data.search)
