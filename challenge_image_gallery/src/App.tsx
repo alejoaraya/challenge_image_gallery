@@ -1,26 +1,22 @@
-import { useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import Images from "./components/Images";
 import Sercher from "./components/Searcher";
+// import ImageProvider from "./context/ImageProvider";
+
+export const ImageContext = createContext([]);
+
 
 function App() {
 
-    const [images, setImages] = useState([])
-    let keyword = 'Dachshund';
-
-    useEffect(() => {
-        fetch(`https://api.unsplash.com/search/photos?query=${keyword}&client_id=${'4EnYaxbE-DFhiGP6HRgwPrMiYdt0U1Zb8H0nPb0qdNU'}`)
-            .then(res => res.json())
-            .then(data => setImages(data.results))
-    }, [])
-
-    function changeName(searching:string) {
-        keyword = searching;
-    }
+    const [keyword, setKeyword] = useState('Dachshund')
 
     return (
         <>
-        <Sercher />
-        <Images />
+            <ImageContext.Provider value={[keyword, setKeyword]}>
+                <Sercher />
+                <Images />
+            </ImageContext.Provider>
+
         </>
     );
 }
