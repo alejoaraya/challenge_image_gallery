@@ -1,14 +1,14 @@
-# Galería de imagenes responsiva
- 
-## Objetivo: 
- - Diseña y codifica una galería de imágenes responsiva. Los usuarios deben ser capaces de buscar imágenes por palabra clave. 
+# Galería de imágenes responsiva
+
+## Concepto: 
+Galeria de imágenes responsiva la cual consume una API (Unsplash) que trae una colección de imágenes en línea. A través de la búsqueda de una palabra clave estas imágenes son mostradas al usuario en una grilla adaptable a distintos formatos y tamaños de pantallas. Al hacer click sobre una de estas imágenes se amplia la misma, mostrado el nombre y su descripción.
 
  
 ## Tecnologias usadas
 - [TypeScript](https://www.typescriptlang.org/docs/)
  - [React](https://legacy.reactjs.org/docs/getting-started.html)
- - [SASS](https://sass-lang.com/documentation/)
  - [TailwindCSS](https://tailwindcss.com/docs/installation)
+
 
 
 
@@ -32,14 +32,14 @@
   npm install
 ```
 
-4- Correr el projecto
+4- Correr el proyecto
 
 ```bash
-  npm run start
+  npm run dev
 ```
 
 
-## Authors
+## Autor
 
 - [@Araya Alejo](https://github.com/Shacaso)
 
