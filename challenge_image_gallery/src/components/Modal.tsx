@@ -1,4 +1,3 @@
-// import './Modal.css'
 
 const Modal = ({ children, active, closeModal }) => {
     return (
