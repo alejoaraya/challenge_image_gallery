@@ -9,8 +9,9 @@ Galeria de imágenes responsiva la cual consume una API (Unsplash) que trae una 
  - [React](https://legacy.reactjs.org/docs/getting-started.html)
  - [TailwindCSS](https://tailwindcss.com/docs/installation)
 
-
-
+## Correlo virtualmente
+Desplegado en la plataforma Vercel
+- https://challenge-image-gallery.vercel.app/
 
 ## Correrlo localmente
 
