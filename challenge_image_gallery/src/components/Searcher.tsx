@@ -10,7 +10,6 @@ function Sercher() {
   const [keyword, setKeyword] = useContext(ImageContext)
 
   const onSubmit = (data: any) => {
-    console.log(data.search)
     setKeyword(data.search)
   }
 
