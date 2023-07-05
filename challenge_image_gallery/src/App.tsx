@@ -9,13 +9,16 @@ function App() {
     const [keyword, setKeyword] = useState('Dachshund')
 
     return (
-        <>
-            <ImageContext.Provider value={[keyword, setKeyword]}>
-                <Sercher />
-                <Images />
-            </ImageContext.Provider>
+        <div className="flex flex-col items-center justify-center">
+            <div className="w-[90vw] ">
+                <ImageContext.Provider value={[keyword, setKeyword]}>
+                    <Sercher />
+                    <Images />
+                    <Images />
+                </ImageContext.Provider>
 
-        </>
+            </div >
+        </div>
     );
 }
 

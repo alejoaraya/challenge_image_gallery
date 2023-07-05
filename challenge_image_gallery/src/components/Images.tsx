@@ -17,9 +17,11 @@ function Images() {
 
     return (
         <>
-            {images.length > 0 ? <Find text={`Imágenes encontradas de: ${keyword}`}/> : <Find text={`No se encontraron resultados`}/>}
-            <div className="w-[80%] grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 my-2 mx-auto">
-                {(images && images.map((e, i) => <Image key={i} img={e} />))}
+            {/* {images.length > 0 ? <Find text={`Imágenes encontradas de: ${keyword}`} /> : <Find text={`No se encontraron resultados`} />} */}
+            <div className='flex justify-center'>
+                <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                    {(images && images.map((e, i) => <Image key={i} img={e} />))}
+                </div>
             </div>
         </>
 
