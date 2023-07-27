@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
-import Image from './Image'
+import Image from './ImageCard'
 import { ImageContext } from '../App';
-import Find from './Find';
+import Empty from './Empty';
 
 function Images() {
 
@@ -17,9 +17,10 @@ function Images() {
 
     return (
         <>
-            {/* {images.length > 0 ? <Find text={`Imágenes encontradas de: ${keyword}`} /> : <Find text={`No se encontraron resultados`} />} */}
+            {images.length > 0 ? <Empty text={`Imágenes encontradas de: ${keyword}`} /> : <Empty text={`No se encontraron resultados`} />}
             <div className='flex justify-center'>
-                <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                    {(images && images.map((e, i) => <Image key={i} img={e} />))}
                     {(images && images.map((e, i) => <Image key={i} img={e} />))}
                 </div>
             </div>
