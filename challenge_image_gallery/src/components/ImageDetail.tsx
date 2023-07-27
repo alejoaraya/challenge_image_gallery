@@ -5,12 +5,12 @@ const ImageDetail = (props: any) => {
 
     return (
 
-        <div className="h-[100vh] w-[100vw] bg-white flex flex-row flex-wrap overflow-y-auto">
-            <div className="hero place-items-end ">
-                <img className="w-full shadow-md " src={props.data.img.urls.small} alt={props.data.img.alt_description} />
-                <a className="m-2 btn btn-warning btn-xs" href={props.data.img.links.download}>Look image</a>
+        <div className="h-[100vh] w-[100vw] bg-white flex flex-row flex-wrap overflow-y-auto sm:h-[90vh] sm:w-[90vw]">
+            <div className="hero  sm:w-[50%]">
+                    <img className="w-full shadow-md " src={props.data.img.urls.small} alt={props.data.img.alt_description} />
+                    <a className="m-2 place-self-end btn btn-warning btn-xs" href={props.data.img.links.download}>Look image</a>
             </div>
-            <div className="m-10">
+            <div className="p-10 sm:w-[50%]">
                 <h1 className="font-bold text-center uppercase ">{props.data.img.alt_description}</h1>
                 <hr className="my-3" />
                 <h3 className="text-sm">{props.data.img.alt_description}</h3>
