@@ -11,10 +11,10 @@ const ImageDetail = (props: any) => {
                     <a className="m-2 place-self-end btn btn-warning btn-xs" href={props.data.img.links.download}>Look image</a>
             </div>
             <div className="p-10 sm:w-[50%]">
-                <h1 className="font-bold text-center uppercase ">{props.data.img.alt_description}</h1>
+                <h1 className="font-bold text-center uppercase md:text-xl lg:text-2xl">{props.data.img.alt_description}</h1>
                 <hr className="my-3" />
-                <h3 className="text-sm">{props.data.img.alt_description}</h3>
-                <h3 className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias. Ducimus iste ea obcaecati accusantium eveniet est dicta incidunt illum ratione modi beatae tenetur id natus labore cumque, nemo numquam!</h3>
+                <h3 className="text-sm md:text-lg">{props.data.img.alt_description}</h3>
+                <h3 className="text-sm md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias. Ducimus iste ea obcaecati accusantium eveniet est dicta incidunt illum ratione modi beatae tenetur id natus labore cumque, nemo numquam!</h3>
             </div>
         </div>
     );
