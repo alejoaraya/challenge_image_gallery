@@ -11,13 +11,23 @@ function Images() {
 
     useEffect(() => {
         fetch(`https://api.unsplash.com/search/photos?query=${keyword}&client_id=4EnYaxbE-DFhiGP6HRgwPrMiYdt0U1Zb8H0nPb0qdNU`)
-            .then(res => res.json())
-            .then(data => setImages(data.results))
+        .then(res => {
+            if (!res.ok) {
+              throw new Error();
+            }
+            return res.json();
+          })
+            .then(data => setImages(data.results) )
+            .catch(e => {
+                console.log(e)
+                alert("Hubo un error en la API con la busqueda que realizo")
+                location.reload()
+            })
     }, [keyword])
 
     return (
         <>
-            {images.length > 0 ? <Empty text={`Imágenes encontradas de: ${keyword}`} /> : <Empty text={`No se encontraron resultados`} />}
+            {images.length > 0 ? <Empty text={`Imágenes encontradas de: ${keyword.toUpperCase()}`} /> : <Empty text={`No se encontraron resultados`} />}
             <div className='flex justify-center'>
                 <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                     {(images && images.map((e, i) => <Image key={i} img={e} />))}
